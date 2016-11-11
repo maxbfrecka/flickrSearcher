@@ -1,0 +1,27 @@
+#searchterm {
+	background-color: yellow;
+}
+
+.content {
+  padding: 3px;
+  overflow: hidden;
+  transition: all linear 1.7s;
+  float: center;
+}
+
+.content.ng-enter,
+.content.ng-leave.ng-leave-active {
+  	opacity: 0;
+	max-height:0;
+}
+
+.content.ng-leave,
+.content.ng-enter.ng-enter-active {
+  	opacity: 1;
+    max-height:20em;
+}
+
+.images {
+	width:20%;
+	height:20%;
+}
