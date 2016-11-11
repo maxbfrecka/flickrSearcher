@@ -14,6 +14,7 @@ angular.module('myApp', ['ngMessages', 'ngAnimate'])
 
     	this.searchFlickr = function(searchterm){
     		vm.searchterm = searchterm;
+            vm.resultterm = searchterm
     		var url = 'https://api.flickr.com/services/rest';
     		vm.loader=1;
     		var request = {
@@ -34,7 +35,6 @@ angular.module('myApp', ['ngMessages', 'ngAnimate'])
     			//V stops loading bar after search is done
     			vm.loader=2;
                 vm.searchterm = null
-
   			},
   			function(response) {
     			console.log('Failure :(');

@@ -22,11 +22,10 @@
 		</form>
 
 		<div ng-if="vm.loader==1">Searching Instragram for photos tagged <span id="searchterm"> {{ vm.searchterm }} </span></div>
-		<span id="searchterm"> {{ vm.searchterm }} </span>
-		<div ng-if="vm.loader==2">Your search for <span id="searchterm"> {{ vm.searchterm }}</span> failed</div>
+		<div ng-if="vm.loader==3">Your search for <span id="searchterm"> {{ vm.resultterm }}</span> failed</div>
 
 		<div class="results">
-        	<h2 ng-if="vm.loader==2">We found {{ vm.results.length }} results for {{ vm.searchterm }}</h2>
+        	<h2 ng-if="vm.loader==2">We found {{ vm.results.length }} results for {{ vm.resultterm }}</h2>
         	<div ng-repeat="result in vm.results" class="content">
           		<img class="images" ng-src="{{ vm.trustSrc('https://farm' + result.farm + '.staticflickr.com/' + result.server + '/' + result.id + '_' + result.secret + '.jpg') }}" width="340" height="330"></img>
         	</div>
