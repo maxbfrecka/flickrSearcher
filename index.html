@@ -23,6 +23,7 @@
 
 		<div ng-if="vm.loader==1">Searching Instragram for photos tagged <span id="searchterm"> {{ vm.searchterm }} </span></div>
 		<span id="searchterm"> {{ vm.searchterm }} </span>
+		<div ng-if="vm.loader==2">Your search for <span id="searchterm"> {{ vm.searchterm }}</span> failed</div>
 
 		<div class="results">
         	<h2 ng-if="vm.loader==2">We found {{ vm.results.length }} results for {{ vm.searchterm }}</h2>

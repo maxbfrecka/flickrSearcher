@@ -39,7 +39,7 @@ angular.module('myApp', ['ngMessages', 'ngAnimate'])
   			function(response) {
     			console.log('Failure :(');
                 vm.searchterm = null
-    			vm.loader=2;
+    			vm.loader=3;
   			});
   		}
   	});
